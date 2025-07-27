@@ -60,20 +60,20 @@ fun StudentCard(students: List<Student>){
                 modifier = Modifier
                     .conditional(student.isChecked)
                     .ifTrue {
-                        this.background(Color.Cyan)
-                            .border(BorderStroke(0.dp, Color.Transparent))
-                            .padding(30.dp)
-                            .clickable {
-                                Toast.makeText(context, "true", Toast.LENGTH_SHORT).show()
-                            }
+                        background(Color.Cyan)
+                        .border(BorderStroke(0.dp, Color.Transparent))
+                        .padding(30.dp)
+                        .clickable {
+                            Toast.makeText(context, "true", Toast.LENGTH_SHORT).show()
+                        }
                     }
                     .ifFalse {
-                        this.background(Color.Red.copy(alpha = .5f))
-                            .border(BorderStroke(2.dp, Color.Black))
-                            .padding(50.dp)
-                            .clickable {
-                                Toast.makeText(context, "false", Toast.LENGTH_SHORT).show()
-                            }
+                        background(Color.Red.copy(alpha = .5f))
+                        .border(BorderStroke(2.dp, Color.Black))
+                        .padding(50.dp)
+                        .clickable {
+                            Toast.makeText(context, "false", Toast.LENGTH_SHORT).show()
+                        }
                     }
 //                    .background(
 //                        if(student.isChecked){
